@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.showcase::after{
+    content:'';
+    height: 100vh;
+    width: 100%;
+    background: url(../images/bg11.png) no-repeat center center/cover;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+
+}
+.content{
+    color: #000;
+}
+
+.showcase:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.showcase:hover .content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+
+}
+
+
+.content{
+position: absolute;
+z-index: 1;
+top: 10%;
+left: 50%;
+margin-top: 105px;
+margin-left: -145px;
+width: 300px;
+height: 350px;
+text-align: center;
+transition: all 1s;
+
+}
+.content .logo{
+height: 180px;
+width: 400px;
+}
+.content .text{
+line-height: 1.7;
+margin-top: 1rem;
+}
+.content.title{
+    font-size: 2.2rem;
+    margin-top: 60px;
+}
+.container{
+    min-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.centre{
+    text-align: center;
+    margin: auto;
+}
+.bg-bright{
+    background: #f4f4f4;
+    color: #000;
+}
+.bg-dark{
+    background: #333;
+    color: #f4f4f4;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+
+}
+.grid2 p{
+    font-size: 20px;
+}
+footer{
+    padding: 2.2rem;
+}
+footer p{
+    margin: 0;
+}
+
+
+/*icons*/
+i{
+    
+    font-size: 100px;
+}
+i.fa-laptop-code{
+    font-size: 200px;
+}
+
+
+/*media adjustments*/
+@media(max-width:1000px){
+.showcase::after{
+    height: 70vh;
+}
+.content{
+    top: 5%;
+    margin-top: 5px;
+}
+.content .logo{
+    height: 100px;
+    width: 100px;
+}
+.content .text{
+        line-height: 1;
+        margin-top: 0.2rem;
+}
+.grid3{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 20px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+.container{
+    min-width: 450px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 0.5rem;
+}
+}
+
+/*for tab mode angles*/
+@media(max-height:500px){
+ .showcase .title,
+ .text{
+        display: none;
+    }
+    
+}
